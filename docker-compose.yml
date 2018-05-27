@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  api:
+    container_name: api
+    command: npm run watch
+    restart: always
+    build: .
+    ports:
+      - "49160:8080"
+    links:
+      - couchdb
+
+  couchdb:
+    container_name: couchdb
+    image: apache/couchdb:latest
+    volumes:
+      - ./data/couchdb:/opt/couchdb/data
+    ports:
+      - "5984:5984"

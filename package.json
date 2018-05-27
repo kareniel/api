@@ -1,0 +1,45 @@
+{
+  "name": "vibedrive-api",
+  "version": "0.0.0-development",
+  "description": "Vibedrive API",
+  "homepage": "https://github.com/vibedrive/api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vibedrive/api.git"
+  },
+  "keywords": [
+    "dj"
+  ],
+  "bugs": {
+    "url": "https://github.com/vibedrive/api/issues"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "watch": "nodemon .",
+    "lint": "standard --fix",
+    "test": "node tests"
+  },
+  "author": "kareniel",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "release": {
+    "branch": "master",
+    "success": []
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5",
+    "standard": "^11.0.1",
+    "tape": "^4.9.0"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "helmet": "^3.12.1"
+  }
+}
